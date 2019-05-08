@@ -1,0 +1,6 @@
+WELCOME TO YOU PROJECTS PAGE
+
+
+<% @logged_in_user.projects_created.each do |project| %>
+    <%= link_to project.title, project %>
+<% end %>
