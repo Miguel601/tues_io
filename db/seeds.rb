@@ -5,4 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
- gino = User.create(user_name: "Gino", password_digest: "12345")
+
+User.destroy_all
+Project.destroy_all
+Task.destroy_all
+
+gino = User.create(username: "Gino", password_digest: "12345")
+miguel = User.create(username: "Miguel", password_digest: "12345")
+project_a = Project.create(title: "Test Title", synopsis: "We Work", owner_id: miguel.id, deadline: "1991-01-06")
+
+Task.create(description: "Whats Up", complete: false, user_id: miguel.id, project_id: project_a.id)
+Task.create(description: "Whats Down", complete: false, user_id: gino.id, project_id: project_a.id)
