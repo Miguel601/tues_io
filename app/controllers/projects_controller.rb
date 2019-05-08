@@ -4,7 +4,11 @@ class ProjectsController < ApplicationController
     end
 
     def show
+      if @logged_in_user.id == Project.find(params[:id]).owner_id
         @project = Project.find(params[:id])
+      else
+        redirect_to projects_path
+      end
     end
 
     def new
