@@ -2,12 +2,13 @@ class TasksController < ApplicationController
 
     def new
         @task = Task.new
+        @previous_url = request.referrer.split('/')[4].to_i
     end
 
     def create
-        @task = Task.create(task_params) 
+        @task = Task.create(task_params)
         if @task.valid?
-            redirect_to project_path
+            redirect_to project_path(task_params[:project_id])
         else
             render :new
         end

@@ -14019,3 +14019,830 @@ Started PUT "/__web_console/repl_sessions/ddcb6fa163dc7258a8afdb7f43011c6a" for 
 Started PUT "/__web_console/repl_sessions/ddcb6fa163dc7258a8afdb7f43011c6a" for ::1 at 2019-05-09 10:20:15 -0400
   [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" INNER JOIN "tasks" ON "projects"."id" = "tasks"."project_id" WHERE "tasks"."user_id" = $1 LIMIT $2[0m  [["user_id", 11], ["LIMIT", 11]]
   ↳ /Users/miguelhenriquez/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/users/5" for ::1 at 2019-05-09 10:28:10 -0400
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+pg (1.1.4) lib/pg.rb:56:in `initialize'
+pg (1.1.4) lib/pg.rb:56:in `new'
+pg (1.1.4) lib/pg.rb:56:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/5" for ::1 at 2019-05-09 10:28:17 -0400
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/crait/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 306ms (Views: 248.4ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/projects" for ::1 at 2019-05-09 10:28:22 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."owner_id" = $1[0m  [["owner_id", 5]]
+  ↳ app/views/projects/index.html.erb:4
+  Rendered projects/index.html.erb within layouts/application (96.0ms)
+Completed 200 OK in 224ms (Views: 204.0ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/projects/4" for ::1 at 2019-05-09 10:28:24 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mProject Load (2.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 54ms (Views: 37.9ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/tasks/new" for ::1 at 2019-05-09 10:28:25 -0400
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+Completed 500 Internal Server Error in 5961ms (ActiveRecord: 15.2ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `new'
+app/controllers/tasks_controller.rb:6:in `new'
+Started GET "/projects/4" for ::1 at 2019-05-09 10:28:33 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mProject Load (11.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  [1m[36mCACHE Project Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 317ms (Views: 275.3ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/tasks/new" for ::1 at 2019-05-09 10:28:41 -0400
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+Completed 500 Internal Server Error in 388405ms (ActiveRecord: 1.5ms)
+
+
+  
+SystemExit (exit):
+Started GET "/tasks/new" for ::1 at 2019-05-09 10:35:09 -0400
+  
+Started GET "/projects/4" for ::1 at 2019-05-09 10:35:09 -0400
+(byebug):1:in `exit'
+(byebug):1:in `new'
+app/controllers/tasks_controller.rb:6:in `new'
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  ↳ app/controllers/application_controller.rb:30
+Completed 500 Internal Server Error in 1840ms (ActiveRecord: 13.8ms)
+
+
+  
+  [1m[36mProject Load (29.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+SystemExit (exit):
+  ↳ app/controllers/projects_controller.rb:7
+  [1m[36mCACHE Project Load (13.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  
+(byebug):1:in `exit'
+(byebug):1:in `new'
+app/controllers/tasks_controller.rb:6:in `new'
+  ↳ app/controllers/projects_controller.rb:8
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 3393ms (Views: 1438.3ms | ActiveRecord: 49.3ms)
+
+
+Started GET "/tasks/new" for ::1 at 2019-05-09 10:35:24 -0400
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+Completed 500 Internal Server Error in 54512ms (ActiveRecord: 1.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `new'
+app/controllers/tasks_controller.rb:6:in `new'
+Started GET "/projects/4" for ::1 at 2019-05-09 10:36:30 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  [1m[36mCACHE Project Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 896ms (Views: 501.0ms | ActiveRecord: 30.2ms)
+
+
+Started GET "/projects" for ::1 at 2019-05-09 10:36:33 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."owner_id" = $1[0m  [["owner_id", 5]]
+  ↳ app/views/projects/index.html.erb:4
+  Rendered projects/index.html.erb within layouts/application (72.8ms)
+Started GET "/users/5" for ::1 at 2019-05-09 10:36:34 -0400
+Completed 200 OK in 777ms (Views: 728.9ms | ActiveRecord: 2.2ms)
+
+
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 677ms (Views: 621.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 10:36:53 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 71ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/users/5" for ::1 at 2019-05-09 10:36:53 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (13.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 559ms (Views: 500.6ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/users/4" for ::1 at 2019-05-09 10:37:09 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 76ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/users/5" for ::1 at 2019-05-09 10:37:09 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 499ms (Views: 445.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/projects" for ::1 at 2019-05-09 10:37:15 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."owner_id" = $1[0m  [["owner_id", 5]]
+  ↳ app/views/projects/index.html.erb:4
+  Rendered projects/index.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 563ms (Views: 511.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/projects/4" for ::1 at 2019-05-09 10:37:36 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  [1m[36mCACHE Project Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 539ms (Views: 448.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/projects/3" for ::1 at 2019-05-09 10:37:41 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (15.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 64ms (ActiveRecord: 16.5ms)
+
+
+Started GET "/projects" for ::1 at 2019-05-09 10:37:41 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."owner_id" = $1[0m  [["owner_id", 5]]
+  ↳ app/views/projects/index.html.erb:4
+  Rendered projects/index.html.erb within layouts/application (46.4ms)
+Completed 200 OK in 541ms (Views: 499.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/projects/4" for ::1 at 2019-05-09 10:37:45 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  [1m[36mCACHE Project Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 696ms (Views: 588.7ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/projects/3" for ::1 at 2019-05-09 10:37:50 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mProject Load (1.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 68ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/projects" for ::1 at 2019-05-09 10:37:50 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."owner_id" = $1[0m  [["owner_id", 5]]
+  ↳ app/views/projects/index.html.erb:4
+  Rendered projects/index.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 532ms (Views: 480.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 10:38:12 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 514ms (Views: 488.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login/new" for ::1 at 2019-05-09 10:38:17 -0400
+Processing by LoginController#new as HTML
+  Rendering login/new.html.erb within layouts/application
+  Rendered login/new.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 548ms (Views: 535.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-05-09 10:38:24 -0400
+Processing by LoginController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vB3U70gTnKw/MgeOLkOsQHEm9HlfuMjquVTFxLDUqwwx7jdqjVhBurSW0PjSrpFNT9gCHPI6JNoPx/t4JW20UA==", "username"=>"Testo", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Testo"], ["LIMIT", 1]]
+  ↳ app/controllers/login_controller.rb:8
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 118ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/users/5" for ::1 at 2019-05-09 10:38:24 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 517ms (Views: 463.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 10:41:14 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 498ms (Views: 488.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login/new" for ::1 at 2019-05-09 10:41:18 -0400
+Processing by LoginController#new as HTML
+  Rendering login/new.html.erb within layouts/application
+  Rendered login/new.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 583ms (Views: 558.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-09 10:41:22 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (111.2ms)
+Completed 200 OK in 799ms (Views: 630.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-05-09 10:41:28 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jXieQHuFR3TqKL6tQXO9+iQWn+6Ijl7ZOHmu4JIfurZ/nSBhqlbRURvyvzBYOceyi133DVqsRrF7lir76SoIiA==", "user"=>{"username"=>"Bob", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Create (5.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Bob"], ["password_digest", "$2a$10$N3NdCd2gT.MhO29ohGfwCe7VxgnOuXpXk08OrF.F.AUhzAKJTIWJS"], ["created_at", "2019-05-09 14:41:28.374683"], ["updated_at", "2019-05-09 14:41:28.374683"]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 179ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/users/6" for ::1 at 2019-05-09 10:41:28 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 598ms (Views: 528.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/projects" for ::1 at 2019-05-09 10:41:43 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."owner_id" = $1[0m  [["owner_id", 6]]
+  ↳ app/views/projects/index.html.erb:4
+  Rendered projects/index.html.erb within layouts/application (111.4ms)
+Completed 200 OK in 704ms (Views: 638.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/projects/new" for ::1 at 2019-05-09 10:41:54 -0400
+Processing by ProjectsController#new as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (238.5ms)
+Completed 200 OK in 945ms (Views: 819.1ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/projects" for ::1 at 2019-05-09 10:42:00 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gKxjM546yG3I03m51/FPAm5oAxRz4RptDVqYhxa0UKK/TVVKMUJc4APMnOCVC1g85/P2mTlGd7mqKhk+smQ4RQ==", "project"=>{"owner_id"=>"6", "title"=>"weqwewe", "synopsis"=>"ewqeqwe", "deadline(1i)"=>"2019", "deadline(2i)"=>"5", "deadline(3i)"=>"9"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:19
+  [1m[36mProject Create (2.8ms)[0m  [1m[32mINSERT INTO "projects" ("title", "synopsis", "owner_id", "deadline", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "weqwewe"], ["synopsis", "ewqeqwe"], ["owner_id", 6], ["deadline", "2019-05-09"], ["created_at", "2019-05-09 14:42:00.891941"], ["updated_at", "2019-05-09 14:42:00.891941"]]
+  ↳ app/controllers/projects_controller.rb:19
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:19
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 157ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/projects" for ::1 at 2019-05-09 10:42:00 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."owner_id" = $1[0m  [["owner_id", 6]]
+  ↳ app/views/projects/index.html.erb:4
+  Rendered projects/index.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 603ms (Views: 558.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 10:42:09 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 54ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/users/6" for ::1 at 2019-05-09 10:42:09 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 588ms (Views: 530.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/projects/new" for ::1 at 2019-05-09 10:59:01 -0400
+Processing by ProjectsController#new as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (92.3ms)
+Completed 200 OK in 627ms (Views: 588.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/projects" for ::1 at 2019-05-09 10:59:04 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."owner_id" = $1[0m  [["owner_id", 6]]
+  ↳ app/views/projects/index.html.erb:4
+  Rendered projects/index.html.erb within layouts/application (44.8ms)
+Completed 200 OK in 557ms (Views: 523.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/projects/6" for ::1 at 2019-05-09 10:59:07 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  [1m[36mCACHE Project Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 595ms (Views: 494.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2019-05-09 10:59:09 -0400
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/tasks/new.html.erb:8
+  Rendered tasks/new.html.erb within layouts/application (1221.4ms)
+Completed 500 Internal Server Error in 1421ms (ActiveRecord: 21.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `project_id' for #<User:0x00007fbc6155fa80>
+Did you mean?  project_ids
+               project_ids=
+               projects
+               object_id
+               projects=):
+     6: <%= f.label :description %>
+     7: <%= f.text_field :description %>
+     8: <%= f.collection_select(:user_id, User.all, :id, :username)%>
+     9: <%= f.collection_select(:project_id, @logged_in_user.project_id , :id, :title)%>
+    10: <%= f.submit %>
+    11: <% end %>
+  
+app/views/tasks/new.html.erb:9:in `block in _app_views_tasks_new_html_erb___3014574699190785391_70223530393560'
+app/views/tasks/new.html.erb:4:in `_app_views_tasks_new_html_erb___3014574699190785391_70223530393560'
+Started GET "/projects/6" for ::1 at 2019-05-09 10:59:27 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  [1m[36mCACHE Project Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 1003ms (Views: 637.3ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/tasks/new" for ::1 at 2019-05-09 10:59:31 -0400
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/tasks_controller.rb:6
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Started GET "/tasks/new" for ::1 at 2019-05-09 11:19:46 -0400
+  ↳ (byebug):1
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mProject Load (29.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mProject Load (67.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ (byebug):1
+Completed 500 Internal Server Error in 1551494ms (ActiveRecord: 108.9ms)
+
+
+  
+SystemExit (exit):
+  
+Processing by TasksController#new as HTML
+(byebug):1:in `exit'
+(byebug):1:in `new'
+app/controllers/tasks_controller.rb:6:in `new'
+  [1m[36mUser Load (187.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+Completed 500 Internal Server Error in 4094ms (ActiveRecord: 669.6ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `new'
+app/controllers/tasks_controller.rb:6:in `new'
+Started GET "/tasks/new" for ::1 at 2019-05-09 11:25:34 -0400
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+Completed 500 Internal Server Error in 453ms (ActiveRecord: 27.8ms)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/tasks_controller.rb:5:in `new'
+Started PUT "/__web_console/repl_sessions/2a8e4c5ebc15237158c29b7283091b98" for ::1 at 2019-05-09 11:25:51 -0400
+Started PUT "/__web_console/repl_sessions/2a8e4c5ebc15237158c29b7283091b98" for ::1 at 2019-05-09 11:25:54 -0400
+Started PUT "/__web_console/repl_sessions/2a8e4c5ebc15237158c29b7283091b98" for ::1 at 2019-05-09 11:25:55 -0400
+Started PUT "/__web_console/repl_sessions/2a8e4c5ebc15237158c29b7283091b98" for ::1 at 2019-05-09 11:26:02 -0400
+Started PUT "/__web_console/repl_sessions/2a8e4c5ebc15237158c29b7283091b98" for ::1 at 2019-05-09 11:26:03 -0400
+Started PUT "/__web_console/repl_sessions/2a8e4c5ebc15237158c29b7283091b98" for ::1 at 2019-05-09 11:26:05 -0400
+Started PUT "/__web_console/repl_sessions/2a8e4c5ebc15237158c29b7283091b98" for ::1 at 2019-05-09 11:26:06 -0400
+Started PUT "/__web_console/repl_sessions/2a8e4c5ebc15237158c29b7283091b98" for ::1 at 2019-05-09 11:26:10 -0400
+Started GET "/tasks/new" for ::1 at 2019-05-09 11:27:09 -0400
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+Completed 500 Internal Server Error in 36447ms (ActiveRecord: 15.7ms)
+
+
+  
+Started GET "/tasks/new" for ::1 at 2019-05-09 11:27:47 -0400
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `new'
+app/controllers/tasks_controller.rb:6:in `new'
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (403.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+Completed 500 Internal Server Error in 10427ms (ActiveRecord: 403.9ms)
+
+
+  
+SystemExit (exit):
+Started GET "/projects/6" for ::1 at 2019-05-09 11:27:58 -0400
+Started GET "/tasks/new" for ::1 at 2019-05-09 11:27:58 -0400
+  
+(byebug):1:in `exit'
+(byebug):1:in `new'
+app/controllers/tasks_controller.rb:6:in `new'
+Processing by TasksController#new as HTML
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mProject Load (12.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  ↳ app/controllers/projects_controller.rb:7
+  [1m[36mCACHE Project Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (90.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/projects_controller.rb:8
+  ↳ app/views/tasks/new.html.erb:9
+  Rendered tasks/new.html.erb within layouts/application (205.4ms)
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 1772ms (Views: 1134.8ms | ActiveRecord: 121.5ms)
+
+
+Completed 200 OK in 1984ms (Views: 1282.1ms | ActiveRecord: 139.5ms)
+
+
+Started GET "/tasks/new" for ::1 at 2019-05-09 11:28:14 -0400
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/tasks/new.html.erb:9
+  Rendered tasks/new.html.erb within layouts/application (81.5ms)
+Completed 200 OK in 639ms (Views: 587.8ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/tasks" for ::1 at 2019-05-09 11:28:25 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6e3x4HnDlEvFMpHqW6kAg8K0Row5WlyB/zSGm4wcAK5TAhN3cOzDRTESGfdgDXQXHlmaVWCxh6rD65KKfekRQ==", "task"=>{"complete"=>"false", "project_id"=>"6", "description"=>"Tomato", "user_id"=>"3"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:9
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9
+  [1m[36mTask Create (19.7ms)[0m  [1m[32mINSERT INTO "tasks" ("description", "complete", "user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["description", "Tomato"], ["complete", false], ["user_id", 3], ["project_id", 6], ["created_at", "2019-05-09 15:28:25.669825"], ["updated_at", "2019-05-09 15:28:25.669825"]]
+  ↳ app/controllers/tasks_controller.rb:9
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:9
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 26.9ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"projects"}, missing required keys: [:id]):
+  
+app/controllers/tasks_controller.rb:11:in `create'
+Started PUT "/__web_console/repl_sessions/31093e5b97d38d222067ea3393894381" for ::1 at 2019-05-09 11:29:17 -0400
+Started PUT "/__web_console/repl_sessions/31093e5b97d38d222067ea3393894381" for ::1 at 2019-05-09 11:29:29 -0400
+Started PUT "/__web_console/repl_sessions/31093e5b97d38d222067ea3393894381" for ::1 at 2019-05-09 11:29:53 -0400
+Started PUT "/__web_console/repl_sessions/31093e5b97d38d222067ea3393894381" for ::1 at 2019-05-09 11:30:28 -0400
+Started PUT "/__web_console/repl_sessions/31093e5b97d38d222067ea3393894381" for ::1 at 2019-05-09 11:30:30 -0400
+Started PUT "/__web_console/repl_sessions/31093e5b97d38d222067ea3393894381" for ::1 at 2019-05-09 11:30:31 -0400
+Started PUT "/__web_console/repl_sessions/31093e5b97d38d222067ea3393894381" for ::1 at 2019-05-09 11:30:32 -0400
+Started PUT "/__web_console/repl_sessions/31093e5b97d38d222067ea3393894381" for ::1 at 2019-05-09 11:30:41 -0400
+Started PUT "/__web_console/repl_sessions/31093e5b97d38d222067ea3393894381" for ::1 at 2019-05-09 11:30:42 -0400
+Started PUT "/__web_console/repl_sessions/31093e5b97d38d222067ea3393894381" for ::1 at 2019-05-09 11:30:42 -0400
+Started PUT "/__web_console/repl_sessions/31093e5b97d38d222067ea3393894381" for ::1 at 2019-05-09 11:30:42 -0400
+Started PUT "/__web_console/repl_sessions/31093e5b97d38d222067ea3393894381" for ::1 at 2019-05-09 11:30:50 -0400
+Started PUT "/__web_console/repl_sessions/31093e5b97d38d222067ea3393894381" for ::1 at 2019-05-09 11:30:52 -0400
+Started PUT "/__web_console/repl_sessions/31093e5b97d38d222067ea3393894381" for ::1 at 2019-05-09 11:30:53 -0400
+Started GET "/projects/6" for ::1 at 2019-05-09 11:31:12 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  [1m[36mCACHE Project Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 1001ms (Views: 545.7ms | ActiveRecord: 25.3ms)
+
+
+Started GET "/tasks/new" for ::1 at 2019-05-09 11:31:16 -0400
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/tasks/new.html.erb:9
+  Rendered tasks/new.html.erb within layouts/application (89.9ms)
+Completed 200 OK in 926ms (Views: 732.6ms | ActiveRecord: 9.1ms)
+
+
+Started POST "/tasks" for ::1 at 2019-05-09 11:31:20 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"37qPmyTWqdqF1oijRZ5WYuJHLc6Ccnwg9x0dMT7EaeZxUTARePIUhr4GCoMxcMewsTSavecV00xb7mFheQO9oQ==", "task"=>{"complete"=>"false", "project_id"=>"6", "description"=>"fdsfdsfsd", "user_id"=>"3"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+Completed 500 Internal Server Error in 6310ms (ActiveRecord: 1.1ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/tasks_controller.rb:10:in `create'
+Started GET "/projects/6" for ::1 at 2019-05-09 11:31:42 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mProject Load (9.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  [1m[36mCACHE Project Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 1065ms (Views: 591.8ms | ActiveRecord: 26.1ms)
+
+
+Started GET "/projects/6" for ::1 at 2019-05-09 11:31:46 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  [1m[36mCACHE Project Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 658ms (Views: 567.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2019-05-09 11:31:49 -0400
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (12.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/tasks/new.html.erb:9
+  Rendered tasks/new.html.erb within layouts/application (90.5ms)
+Completed 200 OK in 928ms (Views: 724.7ms | ActiveRecord: 21.2ms)
+
+
+Started POST "/tasks" for ::1 at 2019-05-09 11:31:52 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WxODhmo/4sGolju8iorO1R/5ksuzLpTSb9ZSYSZGQXX1+DwMNhtfnZNGuZz+ZF8HTIoluNZJO77DJS4xYYGVMg==", "task"=>{"complete"=>"false", "project_id"=>"6", "description"=>"sdadasd", "user_id"=>"3"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:9
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9
+  [1m[36mTask Create (1.6ms)[0m  [1m[32mINSERT INTO "tasks" ("description", "complete", "user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["description", "sdadasd"], ["complete", false], ["user_id", 3], ["project_id", 6], ["created_at", "2019-05-09 15:31:53.237084"], ["updated_at", "2019-05-09 15:31:53.237084"]]
+  ↳ app/controllers/tasks_controller.rb:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:9
+Redirected to http://localhost:3000/projects/6
+Completed 302 Found in 293ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/projects/6" for ::1 at 2019-05-09 11:31:53 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:30
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  [1m[36mCACHE Project Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 649ms (Views: 571.4ms | ActiveRecord: 2.8ms)
+
+
