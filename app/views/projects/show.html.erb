@@ -1,5 +1,6 @@
 <h1> Welcome to <%=@project.title %>! </h1>
-<h3> Deadline: <%= @project.deadline %> </h3>
+<h3> Synopsis: <%= @project.synopsis %> </h3>
+<h5> Deadline: <%= @project.deadline %> </h5>
 
 <ul>
 <% if @project.tasks.empty? %>
