@@ -1,5 +1,8 @@
 class TasksController < ApplicationController
 
+    def index
+    end
+
     def new
         @task = Task.new
         @previous_url = request.referrer.split('/')[4].to_i
@@ -25,7 +28,7 @@ class TasksController < ApplicationController
         else
             render :edit
         end
-        
+
     end
 
     def destroy

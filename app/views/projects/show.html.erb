@@ -1,12 +1,17 @@
 <h1> Welcome to <%=@project.title %>! </h1>
+<h3> Deadline: <%= @project.deadline %> </h3>
 
+<ul>
 <% if @project.tasks.empty? %>
-<%= "No current Tasks for Project"%>
-<% else %>
-<% @project.tasks.each do |task| %>
-<%= task.description %> <%= task.user.username %> <%= task.complete %>
-<%= link_to "EDIT", edit_task_path(task.id) %>
+  <%= "No current Tasks for Project"%>
+  <% else %>
+    <% @project.tasks.each do |task| %>
+    <li>
+    <%= task.description %> <%= task.user.username %> <%= task.complete %>
+    <%= link_to "EDIT", edit_task_path(task.id) %>
+    </li>
+  <% end %>
 <% end %>
-<% end %>
+</ul>
 
 <%= link_to "Create Task", new_task_path %>

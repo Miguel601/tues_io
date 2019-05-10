@@ -3,7 +3,7 @@ class LoginController < ApplicationController
     def new
     #   @errors = flash[:errors]
     end
-   
+
     def create
       @user = User.find_by(username: params[:username])
       if @user && @user.authenticate(params[:password])
@@ -14,10 +14,10 @@ class LoginController < ApplicationController
         redirect_to new_login_path
       end
     end
-   
+
     def destroy
       log_out_user
-      redirect_to user_path
+      redirect_to users_path
     end
-   
+
    end
