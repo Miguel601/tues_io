@@ -8,7 +8,7 @@
   <% else %>
     <% @project.tasks.each do |task| %>
     <li>
-    <%= task.description %> <%= task.user.username %> <%= task.complete %>
+    <%= task.description %> <%= task.user.username %> <%# task.complete %>
     <%= link_to "EDIT", edit_task_path(task.id) %>
     </li>
   <% end %>
